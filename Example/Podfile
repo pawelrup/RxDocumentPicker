@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'RxDocumentPicker_Example' do
+  pod 'SwiftLint'
+  pod 'RxDocumentPicker', :path => '../'
+
+  target 'RxDocumentPicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
