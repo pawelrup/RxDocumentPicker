@@ -16,12 +16,6 @@ class ViewController: UIViewController {
 	
 	let disposeBag = DisposeBag()
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		let font = UIFont.systemFont(ofSize: 10, weight: .medium)
-		print(font.fontName, font.familyName)
-	}
-	
 	@IBAction private func documentMenuAction() {
 		if #available(iOS 11.0, *) {
 			print("UIDocumentMenuViewController is deprecated. Use UIDocumentPickerViewController directly.")

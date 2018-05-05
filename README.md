@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Xcode 9, Swift 4.1
+
 ## Installation
 
 RxDocumentPicker is available through [CocoaPods](https://cocoapods.org). To install
@@ -20,9 +22,56 @@ it, simply add the following line to your Podfile:
 pod 'RxDocumentPicker'
 ```
 
+## Usage
+
+For iOS versions before iOS 11 you can use `UIDocumentMenuViewController` like below:
+
+```swift
+let menu = UIDocumentMenuViewController(documentTypes: [kUTTypePDF as String], in: .import)
+menu.rx
+	.didPickDocumentPicker
+	.do(onNext: { [weak self] (picker: UIDocumentPickerViewController) in
+		self?.present(picker, animated: true, completion: nil)
+	})
+	.flatMap { $0.rx.didPickDocumentAt }
+	.subscribe(onNext: {
+		print($0)
+	})
+	.disposed(by: disposeBag)
+present(menu, animated: true, completion: nil)
+```
+
+`UIDocumentMenuViewController` is deprecated from iOS 11 so you need to use `UIDocumentPickerViewController` directly:
+
+```swift
+let picker = UIDocumentPickerViewController(documentTypes: [kUTTypePDF as String], in: .import)
+picker.rx
+	.didPickDocumentsAt
+	.subscribe(onNext: { [weak self] (urls: [URL]) in
+        print(urls)
+	})
+	.disposed(by: disposeBag)
+present(picker, animated: true, completion: nil)
+```
+
+If you want to know when user cancelled picking documents you can subscribe to `documentPickerWasCancelled` like below:
+
+```swift
+let picker = UIDocumentPickerViewController(documentTypes: [kUTTypePDF as String], in: .import)
+picker.rx
+	.documentPickerWasCancelled
+	.subscribe(onNext: {
+		// Do something
+	})
+	.disposed(by: disposeBag)
+present(picker, animated: true, completion: nil)
+```
+
+You can see usage of `RxDocumentPicker` in example.
+
 ## Author
 
-pawelrup, rupeqdj@gmail.com
+lobocode, pawelrup@lobocode.pl
 
 ## License
 
