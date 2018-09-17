@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxDocumentPicker'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Reactive extension for UIDocumentMenuViewController and UIDocumentPickerViewController.'
 
   s.description      = <<-DESC
@@ -31,6 +31,6 @@ Pod::Spec.new do |s|
   }
   
   s.frameworks = 'UIKit'
-  s.dependency 'RxSwift', '~> 4.1.2'
-  s.dependency 'RxCocoa', '~> 4.1.2'
+  s.dependency 'RxSwift', '~> 4.3.0'
+  s.dependency 'RxCocoa', '~> 4.3.0'
 end
