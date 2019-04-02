@@ -1,11 +1,11 @@
 PODS:
-  - RxCocoa (4.3.0):
-    - RxSwift (~> 4.0)
-  - RxDocumentPicker (0.1.2):
-    - RxCocoa (~> 4.3.0)
-    - RxSwift (~> 4.3.0)
-  - RxSwift (4.3.0)
-  - SwiftLint (0.27.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxDocumentPicker (0.1.5):
+    - RxCocoa (~> 4.5.0)
+    - RxSwift (~> 4.5.0)
+  - RxSwift (4.5.0)
+  - SwiftLint (0.31.0)
 
 DEPENDENCIES:
   - RxDocumentPicker (from `../`)
@@ -22,11 +22,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RxCocoa: 71b9cce833fbcb89a8eec11816dd225830c2bd3c
-  RxDocumentPicker: 601a83e08ea9a3e8d6d177c38c0d7b6c96e14900
-  RxSwift: a9717a34df3179fe63563f76e046ad345078dd3a
-  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxDocumentPicker: cc4354ba2b47464ae3ecbcdfdbe887e3d5c38c13
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
 PODFILE CHECKSUM: d148e15a7a3dfc2f26b0f980dcb8f182b8a5bc6a
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.0.beta.3
