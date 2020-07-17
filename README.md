@@ -4,16 +4,24 @@
 [![Version](https://img.shields.io/cocoapods/v/RxDocumentPicker.svg?style=flat)](https://cocoapods.org/pods/RxDocumentPicker)
 [![License](https://img.shields.io/cocoapods/l/RxDocumentPicker.svg?style=flat)](https://cocoapods.org/pods/RxDocumentPicker)
 [![Platform](https://img.shields.io/cocoapods/p/RxDocumentPicker.svg?style=flat)](https://cocoapods.org/pods/RxDocumentPicker)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+[![Xcode](https://img.shields.io/badge/Xcode-12.0-lightgray.svg?style=flat&logo=xcode)](https://itunes.apple.com/pl/app/xcode/id497799835)
+[![Swift 5.3](https://img.shields.io/badge/Swift-5.3-orange.svg?style=flat&logo=swift)](https://swift.org/)
 
 ## Requirements
 
-Xcode 10.2, Swift 5.0
+Xcode 12, Swift 5.3
 
 ## Installation
+
+### Swift Package Manager
+
+RxUserNotifications is available through Swift Package Manager. To install it, add the following line to your `Package.swift` into dependencies:
+```swift
+.package(url: "https://github.com/pawelrup/RxDocumentPicker", .upToNextMinor(from: "0.2.0"))
+```
+and then add `RxUserNotifications` to your target dependencies.
+
+### CocoaPods
 
 RxDocumentPicker is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -71,7 +79,7 @@ You can see usage of `RxDocumentPicker` in example.
 
 ## Author
 
-lobocode, pawelrup@lobocode.pl
+Paweł Rup, pawelrup@lobocode.pl
 
 ## License
 

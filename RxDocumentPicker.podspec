@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxDocumentPicker'
-  s.version          = '0.1.5'
+  s.version          = '0.2.0'
   s.summary          = 'Reactive extension for UIDocumentMenuViewController and UIDocumentPickerViewController.'
 
   s.description      = <<-DESC
   RxDocumentPicker is an RxSwift reactive extension for UIDocumentMenuViewController and UIDocumentPickerViewController.
-  Requires Xcode 10.2 with Swift 5.0.
+  Requires Xcode 12 with Swift 5.3.
                        DESC
 
   s.homepage         = 'https://github.com/pawelrup/RxDocumentPicker'
@@ -22,15 +22,12 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/pawelrup/RxDocumentPicker.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
-  
-  s.swift_version = '5.0'
 
-  s.source_files = 'RxDocumentPicker/Classes/**/*'
-  s.pod_target_xcconfig =  {
-	  'SWIFT_VERSION' => '5.0',
-  }
-  
+  s.swift_version = '5.3'
+
+  s.source_files = 'Sources/RxDocumentPicker/**/*'
+
   s.frameworks = 'UIKit'
-  s.dependency 'RxSwift', '~> 4.5.0'
-  s.dependency 'RxCocoa', '~> 4.5.0'
+  s.dependency 'RxSwift'
+  s.dependency 'RxCocoa'
 end
